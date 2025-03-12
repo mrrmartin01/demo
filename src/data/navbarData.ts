@@ -22,7 +22,7 @@ export const NavbarData: NavItem[] = [
   {
     id: 2,
     name: "Press",
-    href: "#"
+    href: "press"
   },
   {
     id: 3,

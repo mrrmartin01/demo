@@ -47,7 +47,7 @@ const FooterData2: FooterItems[] = [
 
 const Footer = () => {
   return (
-    <div className="mx-5 md:mx-24 my-[10%]">
+    <div className="mx-5 md:mx-24 mt-[10%] mb-10">
       <div className="mt-5">
         <h1 className="primary text-4xl md:text-5xl font-bold mb-5">
           Sign up for free
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start justify-between mt-15">
+        <div className="flex flex-col md:flex-row items-start justify-between mt-10 md:mt-24">
           <div className="w-full md:w-auto primary">
             {/* Buttons Section */}
             <div className="grid grid-cols-2 gap-8">

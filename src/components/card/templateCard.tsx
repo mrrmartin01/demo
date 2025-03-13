@@ -1,8 +1,10 @@
+"use client"
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Separator } from "@radix-ui/react-separator";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const TemplateCard = ({
   header,
@@ -10,7 +12,7 @@ const TemplateCard = ({
   content,
   bg,
   link,
-  imgSrc
+  imgSrc,
 }: {
   header?: string;
   title: string;
@@ -20,7 +22,10 @@ const TemplateCard = ({
   imgSrc: string;
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       className={cn(
         bg,
         "flex flex-col  items-start justify-center px-10 rounded-xl w-full max-w-xl overflow-hidden"
@@ -38,12 +43,21 @@ const TemplateCard = ({
               <span>{link} now</span>
               <ArrowRight className="w-5 h-5" />
             </div>
-            <Separator orientation="horizontal" className="bg-blue-500 h-0.5 w-full" />
+            <Separator
+              orientation="horizontal"
+              className="bg-blue-500 h-0.5 w-full"
+            />
           </div>
-          <Image width={300} height={900} alt="image" src={imgSrc} className="flex-1 my-5 md:my-0" />
+          <Image
+            width={300}
+            height={900}
+            alt="image"
+            src={imgSrc}
+            className="flex-1 my-5 md:my-0"
+          />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

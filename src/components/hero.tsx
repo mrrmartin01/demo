@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
 import Slider from "./slider/slider";
-import Link from "next/link";
 import { ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -12,7 +13,12 @@ const Hero = () => {
 
       <Slider />
       <div className="flex w-full md:flex-row flex-col items-center justify-between gap-5 px-10 md:px-24  md:py-8 ">
-        <div className="flex gap-2 md:flex-row flex-col items-start justify-center">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="flex gap-2 md:flex-row flex-col items-start justify-center"
+        >
           <h3 className="text-sm">News & Release update</h3>
           <div className="grid grid-col-2">
             <h3 className="text-base">
@@ -29,10 +35,14 @@ const Hero = () => {
               </span>
             </h3>
           </div>
-        </div>
-        <Link href={""} className="text-lg md:text-xl flex items-center">
-          Scroll Down <ArrowDown className="text-emerald-500 w-5 h-5"/>
-        </Link>
+        </motion.div>
+        <motion.a
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }} 
+        href={""} className="text-lg md:text-xl flex items-center">
+          Scroll Down <ArrowDown className="text-emerald-500 w-5 h-5" />
+        </motion.a>
       </div>
     </div>
   );

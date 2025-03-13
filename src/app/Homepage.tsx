@@ -66,8 +66,7 @@ export default function HomePage() {
               link={
                 ["Swap", "Send", "Share ", "Explore"][index]
               }
-              imgSrc={CardImages[index].name}
-              isLong={index < 2}
+              imgSrc={CardImages[index]}
             />
           ))}
         </div>

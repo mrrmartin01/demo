@@ -5,6 +5,8 @@ import { Separator } from "@radix-ui/react-separator";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { StaticImageData } from "next/image";
+
 
 const TemplateCard = ({
   header,
@@ -19,7 +21,7 @@ const TemplateCard = ({
   bg: string;
   content: string;
   link: string;
-  imgSrc: string;
+  imgSrc: StaticImageData;
 }) => {
   return (
     <motion.div

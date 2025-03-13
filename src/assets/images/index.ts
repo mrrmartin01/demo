@@ -29,9 +29,10 @@ export const Logos= [
     {name:identity_pass, alt:"Identity Pass"},
 ]
 
+
 export const CardImages = [
-    {name:peer_to_peer, alt:"Peer to Peer"},
-    {name:express, alt:"Express"},
-    {name:refer_and_earn, alt:"Refer and Earn"},
-    {name:bomba_connect, alt:"Bomba Connect"}
-]
+    peer_to_peer,
+    express,
+    refer_and_earn,
+    bomba_connect
+];
